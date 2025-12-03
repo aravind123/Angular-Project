@@ -1,0 +1,218 @@
+
+.disclosure-history {
+
+  margin-bottom: 200px; // allow space for footer
+  .sidenav {
+    height: 100% !important;
+  }
+
+  .panel {
+    box-shadow: none;
+    .panel-heading {
+      padding: 20px 30px 5px 30px;
+      border-top: 2px solid #bbb;
+      border-bottom: none;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: bold;
+      color: #313738;
+      white-space: normal;
+    }
+  }
+
+
+  .btn-spinner-holder {
+    position: relative;
+    display: inline-block;
+
+    .btn {
+      min-width: 200px;
+    }
+    .btn-icon-spinner {
+      position: absolute;
+      top: 7px;
+      right: 0;
+      display: none;
+      color: white;
+    }
+
+    &.validating {
+      .btn {
+        padding-right: 30px;
+      }
+      .btn-icon-spinner {
+        display: block;
+      }
+    }
+  }
+
+  .required {
+    color: #f00;
+  }
+
+  .panel-default {
+    .row {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .reasons {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style-type: none;
+    }
+    label {
+      font-weight: normal;
+    }
+  }
+  .bg-disclosure-history-success {
+    padding: 20px;
+    color: #fff;
+    background: #0b9444;
+      ul{
+        list-style: none;
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+      }
+
+      li{
+        margin: 5px 0;
+      }
+  }
+
+  .gray-notes {
+    font-weight: normal;
+    color: #aaa;
+    margin-left: 10px;
+  }
+  .textarea-notes {
+    height: 100px;
+    padding: 6px 12px;
+    resize: vertical;
+    margin-bottom: 5px;
+  }
+
+  .top-line {
+    border-top: 2px solid #bbb;
+  }
+
+  .drop-file {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #444c4e;
+    .drop-box {
+      float: none;
+      padding: 15px 5px;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      background: #323839;
+      border: 2px dashed #636363;
+
+      &.dragover {
+        background: #aaa;
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+    .bg-success, .bg-danger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+              border-radius: 5px;
+
+      -webkit-border-radius: 5px;
+         -moz-border-radius: 5px;
+      p {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .fa {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      font-size: 30px;
+      line-height: 40px;
+              border-radius: 20px;
+
+      -webkit-border-radius: 20px;
+         -moz-border-radius: 20px;
+    }
+  }
+
+  .download-link {
+    color: white;
+  }
+  
+  .upload-text {
+    font-size: 12px;
+    margin-top: 53px;
+  }
+  
+  	span[help-text] .glyphicon-info-sign {
+    color: #fff;
+    
+    }
+    
+   
+
+	.popover-inner .popover-content{
+	color:#000;
+	}
+	
+	.fa-angle-up::before {
+    content: "";
+}
+
+
+.fa-angle-down::before {
+    content: "";
+}
+.fa-angle-down {
+    				position: absolute;
+				    top: 0px;
+				    right: 15px;
+				    font-size: 20px;
+					cursor: pointer;
+    			}
+				
+				.fa-angle-up {
+    				position: absolute;
+				    top: 0px;
+				    right: 15px;
+				    font-size: 20px;
+					cursor: pointer;
+    			}
+				.disclosureData{
+				cursor: pointer;
+				}
+.disclosureHeader div{
+color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+	}
+	
+	 .disclosureDataTable  td {
+    padding-left: 0px !important;
+}
+.disclosureDataTable  td:first-child {
+    padding-left: 0px !important;
+}
+}

@@ -1,0 +1,427 @@
+<div class="main" page-height="footer-below-fold">
+	<div id="loan-details" class="row fixed-internal" ui-view="details"></div>
+	<div class="disclosure-history">
+		<div class="row">
+			<div global-nav></div>
+			<div class="panel panel-default">
+				<div class="panel-heading-main clearfix">
+
+					<h2 class="panel-title-main pull-left">
+						<strong>Disclosure History</strong>
+
+					</h2>
+
+				</div>
+				<div> <button ng-click="fetchService()"> Fetch from Service </button></div><div><button ng-click="fetchShared()">From from Shared</button></div>
+				<div class="panel-default top-line clearfix">
+
+					<div class="panel-default  clearfix">
+						<div class="row">
+							<div class="col-sm-3 col-md-6">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th class="col-sm-4" colspan="2">Compliance Timeline</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Application Date</td>
+											<td>{{loan.applicationDate==null ?
+												'N/A':loan.applicationDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Interview Date</td>
+											<td>{{loan.interviewDate==null ?
+												'N/A':loan.interviewDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Initial LE Due Date</td>
+											<td>{{loan.initialLEDueDate==null ?
+												'N/A':loan.initialLEDueDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Early Close Date</td>
+											<td>{{loan.earlyCloseDate==null ?
+												'N/A':loan.earlyCloseDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Early Fee Collection Date</td>
+											<td>{{loan.earlyFeeCollectionDate==null ?
+												'N/A':loan.earlyFeeCollectionDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Intent To Proceed Date</td>
+											<td>{{loan.intentToProceedDate==null ?
+												'N/A':loan.intentToProceedDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Lock Expiration Date</td>
+											<td>{{loan.lockExpirationDate==null ?
+												'N/A':loan.lockExpirationDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Approval Expiration Date</td>
+											<td>{{loan.approvalExpirationDate==null ?
+												'N/A':loan.approvalExpirationDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col-sm-3 col-md-6">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th class="col-sm-4" colspan="2">Closing Timeline</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Anticipated Closing Date</td>
+											<td>{{loan.anticipatedClosingDate==null ?
+												'N/A':loan.anticipatedClosingDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Proposed Scheduled Closing Date</td>
+											<td>{{loan.proposedScheduledClosingDate==null ?
+												'N/A':loan.proposedScheduledClosingDate | date:
+												'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Proposed CD Due</td>
+											<td>{{loan.proposedCDDueDate==null ?
+												'N/A':loan.proposedCDDueDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Scheduled Closing Date</td>
+											<td>{{loan.scheduledClosingDate==null ?
+												'N/A':loan.scheduledClosingDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Scheduled Disbursement Date</td>
+											<td>{{loan.scheduledDisbursementDate==null ?
+												'N/A':loan.scheduledDisbursementDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Rescission Date</td>
+											<td>{{loan.rescissionDate==null ?
+												'N/A':loan.rescissionDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="panel-default top-line pd-t-15 clearfix">
+						<div class="row">
+							<div class="col-sm-3 col-md-6">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th class="col-sm-4" colspan="2">Loan Estimate Tracking</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Initial LE Disclosure Date</td>
+											<td>{{loan.initialLEDisclosureDate==null ? 'N/A':
+												loan.initialLEDisclosureDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Initial LE Acknowledged Date</td>
+											<td>{{loan.initialLEDisclosureAcknDate==null ?
+												'N/A':loan.initialLEDisclosureAcknDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Last LE Re-Disclosure Date</td>
+											<td>{{loan.lastLEReDisclosureDate==null ?
+												'N/A':loan.lastLEReDisclosureDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Last LE Acknowledged Date</td>
+											<td>{{loan.lastLEReDisclosureAcknDate==null ?
+												'N/A':loan.lastLEReDisclosureAcknDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="col-sm-3 col-md-6">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th class="col-sm-4" colspan="2">Closing Disclosure
+												Tracking</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Initial CD Disclosure Date</td>
+											<td>{{loan.initialCDDisclosureDate==null ?
+												'N/A':loan.initialCDDisclosureDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Initial CD Disclosure Acknowledged Date</td>
+											<td>{{loan.initialCDDisclosureAcknDate==null ?
+												'N/A':loan.initialCDDisclosureAcknDate | date:
+												'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Last CD Re-Disclosure Date</td>
+											<td>{{loan.lastCDReDisclosureDate==null ?
+												'N/A':loan.lastCDReDisclosureDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+										<tr>
+											<td>Last CD Re-Disclosure Acknowledged Date</td>
+											<td>{{loan.lastCDReDisclosureAcknDate==null ?
+												'N/A':loan.lastCDReDisclosureAcknDate | date: 'MM-dd-yyyy'}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="panel-default top-line pd-t-15 clearfix">
+
+
+						<!--eConsent History Section-->
+						<div class="row">
+							<div class="col-sm-3 col-md-12">
+
+								<div class="panel-heading-text clearfix">
+									<h2 class="panel-title text-left">
+										<strong>eConsent History</strong>
+									</h2>
+									<div class="padding-top"></div>
+
+								</div>
+								<table class="table table-striped ">
+									<thead>
+										<tr>
+											<th class="col-sm-2">Borrower</th>
+											<th class="col-sm-1">SSN</th>
+											<th class="col-sm-2">eCon. Package Sent</th>
+											<th class="col-sm-2">eCon. Package Rcvd</th>
+											<th class="col-sm-2">eCon. Authorization <span
+												help-text="eConsentAuth"></span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="eCon in loan.ttEConsent">
+											<td>{{eCon.ecBorrowerName}} {{loan.ecBorrowerName}}</td>
+											<td>{{eCon.ecSSN}}</td>
+											<td>{{eCon.ecPkgSentDate | date: 'MM-dd-yyyy'}}</td>
+											<td>{{eCon.ecRcvdDate==null ? 'N/A':eCon.ecRcvdDate |
+												date: 'MM-dd-yyyy'}}</td>
+											<td>{{eCon.ecRcvd=='false' ? 'No':'Yes'}}</td>
+
+										</tr>
+
+										<tr
+											ng-if="!loan.hasOwnProperty('ttEConsent') || loan.ttEConsent.length==0">
+											<td colspan="5"><div>
+													<strong></strong>At this time, no borrower on this loan has consented to electronically sign disclosure packages.
+												</div></td>
+
+
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!--eConsent History Section-->
+
+
+					<div class="panel-default top-line pd-t-15 clearfix">
+						<!--Disclosure History Section-->
+						<div class="row">
+							<div class="col-sm-3 col-md-12">
+								<div class="panel-heading-text clearfix">
+									<h2 class="panel-title text-left">
+										<strong>Disclosure History</strong>
+									</h2>
+									<div class="padding-top"></div>
+
+								</div>
+
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<td colspan="6" class="disclosureHeader">
+												<div class="col-sm-1 "></div>
+												<div class="col-sm-3 ng-binding">
+													<Strong>Disclosure Type</Strong>
+												</div>
+												<div class="col-sm-2 ng-binding">
+													<Strong>Trans. Date</Strong>
+												</div>
+												<div class="col-sm-2 ng-binding">
+													<Strong>Provider</Strong>
+												</div>
+												<div class="col-sm-2 ng-binding">
+													<Strong>Method</Strong>
+												</div>
+												<div class="col-sm-1 ng-binding">
+													<Strong>Status</Strong>
+												</div>
+
+											</td>
+										</tr>
+									</thead>
+
+									<tbody class="disclosureDataTable">
+										<tr ng-repeat="disHist in loan.ttDscTridHdr" ng-if="disHist.dscStatus === 'Disclosed'">
+											<td>
+												<table width="100%">
+													<tbody>
+														<tr>
+															<td class="disclosureData" colspan="6"
+																ng-click="isCollapsed = !isCollapsed">
+																<div class="col-sm-1">
+																	<span class="fa text-primary fa-angle-up"
+																		ng-class="isCollapsed ? 'fa-angle-up': 'fa-angle-down'"></span>
+																</div>
+
+																<div class="col-sm-3" style="padding-left: 25px">{{disHist.dscType}}</div>
+																<div class="col-sm-2" style="padding-left: 35px">{{disHist.dscDate
+																	| date: 'MM-dd-yyyy'}}</div>
+																<div class="col-sm-2" style="padding-left: 35px">{{disHist.ttDscTridDtl[0].destination}}</div>
+																<div class="col-sm-2" style="padding-left: 35px">{{disHist.ttDscTridDtl[0].destType}}</div>
+																<div class="col-sm-1" style="padding-left: 40px">{{disHist.dscStatus}}</div>
+															</td>
+														</tr>
+														<tr
+															ng-repeat="disTridDtl in disHist.ttDscTridDtl track by $index"
+															ng-if="isCollapsed">
+															<!-- Make the colspan equal to however many columns are used in the <thead> -->
+															<td colspan="7">
+																<div class="col-sm-1">
+																	<div class="col-sm-12">
+																		<strong>Pkg#</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridDtl.dscPkg}}</div>
+																</div>
+																<div class="col-sm-1">
+																	<div class="col-sm-12">
+																		<strong>Method</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridDtl.destType}}</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>Name</strong>
+																	</div>
+																	<div class="col-sm-12">
+																		{{disHist.ttDscTridBor[$index].name}}</div>
+																</div>
+																<div class="col-sm-2" style="word-break: break-all">
+																	<div class="col-sm-12">
+																		<strong>Email</strong>
+																	</div>
+																	<div class="col-sm-12">
+																		{{disTridDtl.destEmail.substring(0,disTridDtl.destEmail.indexOf('@'))}}
+																		{{disTridDtl.destEmail.substring(disTridDtl.destEmail.indexOf('@'),disTridDtl.destEmail.length)}}
+																	</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>Address</strong>
+																	</div>
+																	<div class="col-sm-12">
+																		{{disHist.ttDscTridBor[$index].borStreet}}</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>Package Sent</strong>
+																	</div>
+																	<div class="col-sm-12">{{disHist.pkgSentDate |
+																		date: 'MM-dd-yyyy'}}</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>Package Signed</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridDtl.signDate |
+																		date: 'MM-dd-yyyy'}}</div>
+																</div>
+															</td>
+														</tr>
+														<tr
+															ng-repeat="disTridCOC in disHist.ttDscTridCOC track by $index"
+															ng-if="isCollapsed">
+															<!-- Make the colspan equal to however many columns are used in the <thead> -->
+															<td colspan="6">
+
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>COC Event</strong>
+																	</div>
+																	<div class="col-sm-12">COC Event</div>
+																</div>
+																<div class="col-sm-3">
+																	<div class="col-sm-12">
+																		<strong>Change Reason</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridCOC.reasonKey}}</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>Trans Date</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridCOC.reasonDate |
+																		date: 'MM-dd-yyyy'}}</div>
+																</div>
+																<div class="col-sm-3">
+																	<div class="col-sm-12">
+																		<strong>Triggered by</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridCOC.reasonUser}}
+																	</div>
+																</div>
+																<div class="col-sm-2">
+																	<div class="col-sm-12">
+																		<strong>Status</strong>
+																	</div>
+																	<div class="col-sm-12">{{disTridCOC.reasonStat}}
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr ng-if="!disclosedStatus">
+											<td colspan="5"><div>
+													<strong></strong> The loan has not been disclosed. Disclosure data is not available at this time.
+												</div></td>
+										</tr>
+
+
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<div class="loading" ng-show="loading">
+		<div ng-show="!loadingError">
+			<h2>Loading</h2>
+			<i class="fa fa-spinner fa-pulse"></i>
+		</div>
+		<div ng-show="loadingError">
+			<h2>There has been an error loading the page, please refresh or
+				return to your pipeline</h2>
+
+
+		</div>
+	</div>
+</div>

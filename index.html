@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS 1.5.6 App</title>
+  <!-- AngularJS 1.5.6 CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="#!/">Home</a> |
+    <a href="#!/about">About</a>
+    <a href="#!/disclosure-history">Disclosure History</a>
+  </nav>
+  <div ng-view></div>
+
+  <!-- App Scripts -->
+  <script src="app.js"></script>
+  <script src="components/home/home.js"></script>
+  <script src="components/about/about.js"></script>
+  <script src="components/shared/shared-data-service.js"></script>
+  <script src="components/disclosure-history/disclosure-history-service.js"></script>
+  <script src="components/disclosure-history/disclosure-history-controller.js"></script>
+</body>
+</html>

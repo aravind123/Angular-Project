@@ -1,0 +1,71 @@
+{
+  "applicationDate": "2024-09-01",
+  "interviewDate": "2024-09-02",
+  "initialLEDueDate": "2024-09-03",
+  "earlyCloseDate": "2024-09-10",
+  "earlyFeeCollectionDate": "2024-09-04",
+  "intentToProceedDate": "2024-09-05",
+  "lockExpirationDate": "2024-10-01",
+  "approvalExpirationDate": "2024-10-15",
+  "anticipatedClosingDate": "2024-10-20",
+  "proposedScheduledClosingDate": "2024-10-22",
+  "proposedCDDueDate": "2024-10-18",
+  "scheduledClosingDate": "2024-10-25",
+  "scheduledDisbursementDate": "2024-10-26",
+  "rescissionDate": "2024-10-28",
+  "initialLEDisclosureDate": "2024-09-03",
+  "initialLEDisclosureAcknDate": "2024-09-04",
+  "lastLEReDisclosureDate": "2024-09-10",
+  "lastLEReDisclosureAcknDate": "2024-09-11",
+  "initialCDDisclosureDate": "2024-10-18",
+  "initialCDDisclosureAcknDate": "2024-10-19",
+  "lastCDReDisclosureDate": "2024-10-20",
+  "lastCDReDisclosureAcknDate": "2024-10-21",
+  "ttEConsent": [
+    {
+      "ecBorrowerName": "John Doe",
+      "ecSSN": "123-45-6789",
+      "ecPkgSentDate": "2024-09-02",
+      "ecRcvdDate": "2024-09-03",
+      "ecRcvd": "true"
+    },
+    {
+      "ecBorrowerName": "Jane Smith",
+      "ecSSN": "987-65-4321",
+      "ecPkgSentDate": "2024-09-02",
+      "ecRcvdDate": null,
+      "ecRcvd": "false"
+    }
+  ],
+  "ttDscTridHdr": [
+    {
+      "dscType": "Initial Disclosure from loan.json",
+      "dscDate": "2024-09-03",
+      "dscStatus": "Disclosed",
+      "ttDscTridDtl": [
+        {
+          "destination": "Email",
+          "destType": "Electronic",
+          "destEmail": "john.doe@example.com",
+          "dscPkg": "PKG001",
+          "signDate": "2024-09-04"
+        }
+      ],
+      "ttDscTridBor": [
+        {
+          "name": "John Doe",
+          "borStreet": "123 Main St"
+        }
+      ],
+      "ttDscTridCOC": [
+        {
+          "reasonKey": "Change of Circumstance",
+          "reasonDate": "2024-09-05",
+          "reasonUser": "Loan Officer",
+          "reasonStat": "Completed"
+        }
+      ],
+      "pkgSentDate": "2024-09-03"
+    }
+  ]
+}

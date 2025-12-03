@@ -1,0 +1,29 @@
+# Node dependencies
+node_modules/
+
+# Vite / build
+dist/
+.build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Public mock data (if you don't want to commit it)
+# public/mock/
+
+# Optional
+npm-debug.log
+coverage/
